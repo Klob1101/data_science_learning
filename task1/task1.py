@@ -2,17 +2,16 @@ grades = [85, 92, 78, 90, 85, 88, 92, 78, 85, 90]
 
 print('--- Program start ---')
 
-def average_finder(input_list) -> float:
-    """"""
+def average_finder(input_list: list) -> float:
     return sum(input_list) / len(input_list)
 
-def create_distribution(input_list) -> dict:
+def create_distribution(input_list: list) -> dict:
     output_dictionary = dict.fromkeys(input_list, 0)
     for item in input_list:
         output_dictionary[item] += 1
     return output_dictionary
 
-def high_values_finder(input_list, bottom_limit) -> set:
+def high_values_finder(input_list: list, bottom_limit: int) -> set:
     high_values = set()
     high_values = set(filter(lambda x: x > bottom_limit, input_list))
     return high_values
