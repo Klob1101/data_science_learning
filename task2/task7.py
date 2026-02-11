@@ -20,13 +20,14 @@ g = sns.pairplot(
     diag_kind = 'hist',
     plot_kws = {'alpha': 0.7, 's': 40}
 )
-g.figure.suptitle('Pairplot: MPG, Horsepower, Weight, Acceleration', y = 1.02)
+g.figure.suptitle('Pairplot: MPG, Horsepower, Weight, Acceleration')
+g.tight_layout(rect = [0.03, 0.03, 0.90, 0.97])
 
 corr = df[['mpg', 'horsepower', 'weight', 'acceleration']].corr()
 
 print(corr)
 
-plt.figure(figsize=(6, 4))
+plt.figure(figsize = (6, 4))
 sns.heatmap(
     corr,
     annot = True,

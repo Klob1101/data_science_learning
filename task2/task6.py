@@ -24,7 +24,8 @@ sns.scatterplot(
 axes[1].set_title('Зависимость чаевых от суммы счета')
 axes[1].set_xlabel('Сумма счета')
 axes[1].set_ylabel('Чаевые')
-axes[1].legend(title='Пол')
+axes[1].legend(title = 'Пол')
 axes[1].grid(True, alpha = 0.25)
 
+plt.tight_layout()
 plt.show()
