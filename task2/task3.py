@@ -6,9 +6,9 @@ df = sns.load_dataset('titanic')
 missing = df.isnull().sum()
 print(missing[missing > 0])
 
-median_age = df['age'].median()
-df['age'] = df['age'].fillna(median_age)
-print(f"\nMedian age: {median_age}")
+mean_age = df['age'].mean()
+df['age'] = df['age'].fillna(mean_age)
+print(f"\nMedian age: {mean_age}")
 print(f"Number of missings in age: {df['age'].isnull().sum()}")
 
 plt.figure(figsize = (10, 6))
